@@ -1,0 +1,25 @@
+{
+  "name": "fast-food-frontend",
+  "version": "1.0.0",
+  "description": "more stuff",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:pug && npm run build:scss",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --output-style compressed -o ../public/assets/css ./scss",
+    "pug": "pug ./views -o ../templates/app --extension phtml",
+    "build:pug": "npm run pug",
+    "build:scss": "npm run scss",
+    "watch:scss": "nodemon -e scss -x \"npm run build:scss\"",
+    "watch:pug": "nodemon -e pug -x \"npm run build:pug\"",
+    "watch:all": "npm-run-all --parallel watch:scss watch:pug"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.10.0",
+    "npm-run-all": "^2.3.0",
+    "pug": "^2.0.0-beta5",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
