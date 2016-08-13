@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Fm\App\Action;
 
 use Zend\Diactoros\Response\HtmlResponse;
@@ -17,8 +19,13 @@ class HomePageAction extends Action
     public function __invoke($request, $response)
     {
         $data = [];
-        $data['title'] = 'Fast Food Delivery';
+        $data['title'] = $this->getTitle('Fast food');
 
         return new HtmlResponse($this->template->render('app::index', $data));
+    }
+
+    public function getTitle(String $title): String
+    {
+        return "$title - Home";
     }
 }
