@@ -44,5 +44,4 @@ class Category extends Entity
         $this->slug = Uuid::uuid4()->toString();
     }
 
-
 }

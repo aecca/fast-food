@@ -54,8 +54,4 @@ class AuthIdentity
     {
         return $this->token;
     }
-
-
-
-
 }
