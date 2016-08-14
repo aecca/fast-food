@@ -5,7 +5,7 @@ return [
         [
             'name' => 'home',
             'path' => '/',
-            'middleware' => Fm\App\Action\HomePageAction::class,
+            'middleware' => Fm\App\Action\HomeAction::class,
             'allowed_methods' => ['GET'],
         ],
         [

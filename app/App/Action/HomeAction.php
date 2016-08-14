@@ -7,13 +7,13 @@ namespace Fm\App\Action;
 use Zend\Diactoros\Response\HtmlResponse;
 
 /**
- * Class HomePageAction
+ * Class HomeAction
  *
  * @package Fm\App\Action
  * @author Andy Ecca <andy.ecca@gmail.com>
- * @copyright (c) 2016
+ * @copyright (c) 2016, Orbis
  */
-class HomePageAction extends Action
+class HomeAction extends Action
 {
 
     public function __invoke($request, $response)
